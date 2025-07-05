@@ -17,6 +17,7 @@ The repository includes two state-of-the-art methods for face manipulation and s
 │   ├── images/                   # Image assets
 │   │   ├── base_images/          # Input images
 │   │   └── edited_images/        # Generated output images
+│   │   └── failed_edits/         # failed images
 │   └── README.md                 # Detailed SFE documentation
 └── styleres/                     # StyleRes implementation
     ├── StyleRes/                 # Main code directory
