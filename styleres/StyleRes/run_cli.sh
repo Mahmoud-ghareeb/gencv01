@@ -4,7 +4,7 @@ python cli.py \
     --input-image /home/mahmoud/gencv01/styleres/images/base_images/IMG_20230919_092005_900-02.jpeg \
     --output-image /home/mahmoud/gencv01/styleres/images/edited_images/ME_eye_openness.jpg \
     --method GANSpace \
-    --edit "White Hair" \
+    --edit "Overexposed" \
     --factor -9.0 \
     --align
 
