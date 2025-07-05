@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  sfe-gradio:
+    build: .
+    container_name: sfe-gradio
+    ports:
+      - "7860:7860"
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+      - NVIDIA_VISIBLE_DEVICES=all
+    command: python app.py
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    networks:
+      - sfe-network
+
+networks:
+  sfe-network:
+    driver: bridge
